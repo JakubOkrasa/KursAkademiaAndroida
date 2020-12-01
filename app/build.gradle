@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'de.mannodermaus.android-junit5'
+    id 'kotlin-kapt'
 }
 
 apply from: '../dependencies.gradle'
@@ -47,6 +48,8 @@ dependencies {
     implementation lifecycleDependencies.values()
     implementation networkDependencies.values()
     implementation junitDependencies.values()
+    
     testRuntimeOnly junitRuntimeDependencies.values()
     testImplementation otherTestsDependencies.values()
+
 }
