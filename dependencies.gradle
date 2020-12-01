@@ -1,0 +1,75 @@
+ext {
+    def AppCompatVersion = "1.2.0"
+    def CoreKtxVersion = "1.3.2"
+    def constraintLayoutVersion = "2.0.4"
+    def materialDesignVersion = "1.2.1"
+    def recyclerViewVersion = "1.1.0"
+    def glideVersion = "4.11.0"
+    def navigationVersion = "2.3.1"
+    def koinVersion = "2.2.1"
+    def coroutinesVersion = "1.4.0"
+    def lifecycleVersion = "2.2.0"
+    def lifeeventVersion = "1.2.0"
+    def retrofitVersion = "2.9.0"
+    def gsonVersion = "4.9.0"
+    def junitVersion = "5.6.2"
+    def mockkVersion = "1.10.0"
+    def kluentVersion = "1.61"
+
+    coreDependencies = [
+            appCompat: "androidx.appcompat:appcompat:" + AppCompatVersion,
+            coreKtx: "androidx.core:core-ktx:" + CoreKtxVersion
+    ]
+
+    uiDependencies = [
+            constraintlayout: "androidx.constraintlayout:constraintlayout:" + constraintLayoutVersion,
+            material: "com.google.android.material:material:" + materialDesignVersion,
+            recyclerview: "androidx.recyclerview:recyclerview:" + recyclerViewVersion,
+            glide: "com.github.bumptech.glide:glide:" + glideVersion
+    ]
+
+    navigationDependencies = [
+            navFragmentKtx: "androidx.navigation:navigation-fragment-ktx:" + navigationVersion,
+            navUiKtx: "androidx.navigation:navigation-ui-ktx:"  + navigationVersion
+    ]
+
+    diDependencies = [
+            koinAndroid: "org.koin:koin-android:" + koinVersion,
+            koinViewmodel: "org.koin:koin-androidx-viewmodel:" + koinVersion,
+            koinScope: "org.koin:koin-androidx-scope:" + koinVersion
+    ]
+
+    coroutinesDependencies = [
+            coroutinesCore: "org.jetbrains.kotlinx:kotlinx-coroutines-core:" + coroutinesVersion,
+            coroutinesAndroid: "org.jetbrains.kotlinx:kotlinx-coroutines-android:" + coroutinesVersion
+    ]
+
+    lifecycleDependencies = [
+            viewModelKtx: "androidx.lifecycle:lifecycle-viewmodel-ktx:" + lifecycleVersion,
+            livedataKtx: "androidx.lifecycle:lifecycle-livedata-ktx:" + lifecycleVersion,
+            runtimeKtx: "androidx.lifecycle:lifecycle-runtime-ktx:" + lifecycleVersion,
+            commonJava8: "androidx.lifecycle:lifecycle-common-java8:" + lifecycleVersion,
+            liveevent: "com.github.hadilq.liveevent:liveevent:" + lifeeventVersion
+    ]
+
+    networkDependencies = [
+            retrofit: "com.squareup.retrofit2:retrofit:" + retrofitVersion,
+            converterGson: "com.squareup.retrofit2:converter-gson:" + retrofitVersion,
+            okhttp: "com.squareup.okhttp3:okhttp:" + gsonVersion,
+            loggingInterceptor: "com.squareup.okhttp3:logging-interceptor:" + gsonVersion
+    ]
+
+    junitDependencies = [
+            junitJupyterApi: "org.junit.jupiter:junit-jupiter-api:" + junitVersion,
+            junitJupyterParams: "org.junit.jupiter:junit-jupiter-params:" + junitVersion
+    ]
+
+    junitRuntimeDependencies = [
+            junitJupyperEngine: "org.junit.jupiter:junit-jupiter-engine:" + junitVersion
+    ]
+
+    otherTestsDependencies = [
+            mockk: "io.mockk:mockk:" + mockkVersion,
+            kluent: "org.amshove.kluent:kluent:" + kluentVersion
+    ]
+}
