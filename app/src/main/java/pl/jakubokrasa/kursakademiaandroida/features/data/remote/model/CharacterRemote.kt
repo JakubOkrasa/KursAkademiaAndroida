@@ -24,7 +24,7 @@ data class CharacterRemote(
   gender=gender,
   id=id,
   image=image,
-  location=location,
+  location=location.toLocation(),
   name=name,
   origin=origin,
   species=species,
