@@ -11,12 +11,12 @@ data class EpisodeDisplayable(
     val url: String
 )
 {
-    constructor(e: Episode): this(
-        id = e.id,
-        name= e.name,
-        airDate = e.airDate,
-        code = e.code,
-        characters = e.characters,
-        url = e.url
+    constructor(episode: Episode): this(
+        id = episode.id,
+        name= episode.name,
+        airDate = episode.airDate,
+        code = episode.code,
+        characters = episode.characters,
+        url = episode.url
         )
 }

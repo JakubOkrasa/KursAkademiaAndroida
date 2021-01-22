@@ -18,17 +18,17 @@ data class CharacterDisplayable(
     val type: String,
     val url: String
 ) {
-    constructor(c: Character): this(
-        episode = c.episode,
-        gender = c.gender,
-        id = c.id,
-        image = c.image,
-        location = LocationDisplayable(c.location),
-        name = c.name,
-        origin = c.origin,
-        species = c.species,
-        status = c.status,
-        type = c.type,
-        url = c.url
+    constructor(character: Character): this(
+        episode = character.episode,
+        gender = character.gender,
+        id = character.id,
+        image = character.image,
+        location = LocationDisplayable(character.location),
+        name = character.name,
+        origin = OriginDisplayable(character.origin),
+        species = character.species,
+        status = character.status,
+        type = character.type,
+        url = character.url
     )
 }

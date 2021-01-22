@@ -10,12 +10,12 @@ data class LocationDisplayable(
     val type: String,
     val url: String
 ) {
-    constructor(loc: Location): this(
-        id = loc.id,
-        name = loc.name,
-        dimension = loc.dimension,
-        residents = loc.residents,
-        type = loc.type,
-        url = loc.url
+    constructor(location: Location): this(
+        id = location.id,
+        name = location.name,
+        dimension = location.dimension,
+        residents = location.residents,
+        type = location.type,
+        url = location.url
     )
 }
