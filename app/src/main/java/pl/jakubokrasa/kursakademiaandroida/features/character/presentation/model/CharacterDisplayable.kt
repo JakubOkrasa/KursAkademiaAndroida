@@ -2,8 +2,8 @@ package pl.jakubokrasa.kursakademiaandroida.features.character.presentation.mode
 
 import pl.jakubokrasa.kursakademiaandroida.features.character.domain.model.Character
 import pl.jakubokrasa.kursakademiaandroida.features.data.remote.model.OriginResponse
-import pl.jakubokrasa.kursakademiaandroida.features.data.remote.model.LocationRemote
 import pl.jakubokrasa.kursakademiaandroida.features.location.presentation.model.LocationDisplayable
+import pl.jakubokrasa.kursakademiaandroida.features.origin.presentation.model.OriginDisplayable
 
 data class CharacterDisplayable(
     val episode: List<String>,
@@ -12,7 +12,7 @@ data class CharacterDisplayable(
     val image: String,
     val location: LocationDisplayable,
     val name: String,
-    val origin: OriginResponse,
+    val origin: OriginDisplayable,
     val species: String,
     val status: String,
     val type: String,

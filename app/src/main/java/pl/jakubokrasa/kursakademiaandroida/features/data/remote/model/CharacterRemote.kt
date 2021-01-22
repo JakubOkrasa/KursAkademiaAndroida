@@ -26,7 +26,7 @@ data class CharacterRemote(
   image=image,
   location=location.toLocation(),
   name=name,
-  origin=origin,
+  origin=origin.toOrigin(),
   species=species,
   status=status,
   type=type,

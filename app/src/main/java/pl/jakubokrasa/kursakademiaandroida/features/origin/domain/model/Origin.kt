@@ -1,4 +1,7 @@
 package pl.jakubokrasa.kursakademiaandroida.features.origin.domain.model
 
-class Origin {
-}
+
+data class Origin(
+    val name: String,
+    val url: String
+)
