@@ -1,4 +1,4 @@
-package pl.jakubokrasa.kursakademiaandroida.features
+package pl.jakubokrasa.kursakademiaandroida.features.episode
 
 import pl.jakubokrasa.kursakademiaandroida.features.episode.domain.model.Episode
 
