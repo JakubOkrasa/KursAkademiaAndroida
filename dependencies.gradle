@@ -15,6 +15,7 @@ ext {
     def junitVersion = "5.6.2"
     def mockkVersion = "1.10.0"
     def kluentVersion = "1.61"
+    def roomVersion = '2.2.5'
 
     coreDependencies = [
             appCompat: "androidx.appcompat:appcompat:" + AppCompatVersion,
@@ -58,6 +59,13 @@ ext {
             okhttp: "com.squareup.okhttp3:okhttp:" + gsonVersion,
             loggingInterceptor: "com.squareup.okhttp3:logging-interceptor:" + gsonVersion
     ]
+
+    roomDependencies = [
+            runtime: "androidx.room:room-runtime:$roomVersion",
+            ktx    : "androidx.room:room-ktx:$roomVersion"
+    ]
+
+    roomAnnotaionProcessor = "androidx.room:room-compiler:$roomVersion"
 
     junitDependencies = [
             junitJupyterApi: "org.junit.jupiter:junit-jupiter-api:" + junitVersion,
