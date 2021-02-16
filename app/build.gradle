@@ -44,11 +44,13 @@ dependencies {
     implementation coreDependencies.values()
     implementation uiDependencies.values()
     implementation navigationDependencies.values()
+    implementation diDependencies.values()
     implementation coroutinesDependencies.values()
     implementation lifecycleDependencies.values()
     implementation networkDependencies.values()
+    implementation roomDependencies.values()
+
     implementation junitDependencies.values()
-    
     testRuntimeOnly junitRuntimeDependencies.values()
     testImplementation otherTestsDependencies.values()
 
