@@ -1,4 +1,4 @@
-package pl.jakubokrasa.kursakademiaandroida.features.location
+package pl.jakubokrasa.kursakademiaandroida.features.location.domain
 
 import pl.jakubokrasa.kursakademiaandroida.features.location.domain.model.Location
 

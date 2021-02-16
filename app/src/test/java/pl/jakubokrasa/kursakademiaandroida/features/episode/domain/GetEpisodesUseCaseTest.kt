@@ -3,11 +3,7 @@ package pl.jakubokrasa.kursakademiaandroida.features.episode.domain
 import io.mockk.coVerify
 import io.mockk.mockk
 import kotlinx.coroutines.GlobalScope
-import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
-import pl.jakubokrasa.kursakademiaandroida.features.character.CharacterRepository
-import pl.jakubokrasa.kursakademiaandroida.features.character.domain.GetCharactersUseCase
-import pl.jakubokrasa.kursakademiaandroida.features.episode.EpisodeRepository
 
 internal class GetEpisodesUseCaseTest {
     @Test
