@@ -1,7 +1,7 @@
 package pl.jakubokrasa.kursakademiaandroida.features.character.presentation.model
 
 import pl.jakubokrasa.kursakademiaandroida.features.character.domain.model.Character
-import pl.jakubokrasa.kursakademiaandroida.features.data.remote.model.OriginResponse
+import pl.jakubokrasa.kursakademiaandroida.core.api.model.OriginResponse
 import pl.jakubokrasa.kursakademiaandroida.features.location.presentation.model.LocationDisplayable
 import pl.jakubokrasa.kursakademiaandroida.features.origin.presentation.model.OriginDisplayable
 

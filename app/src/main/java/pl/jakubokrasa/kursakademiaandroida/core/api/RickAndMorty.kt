@@ -1,4 +1,4 @@
-package pl.jakubokrasa.kursakademiaandroida.features.data
+package pl.jakubokrasa.kursakademiaandroida.core.api
 
 //import androidx.room.Entity
 //

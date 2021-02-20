@@ -1,12 +1,11 @@
 package pl.jakubokrasa.kursakademiaandroida.core.di
 
-import com.google.gson.Gson
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.dsl.module
 import pl.jakubokrasa.kursakademiaandroida.BuildConfig
-import pl.jakubokrasa.kursakademiaandroida.features.data.RickAndMortyApi
+import pl.jakubokrasa.kursakademiaandroida.core.api.RickAndMortyApi
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 

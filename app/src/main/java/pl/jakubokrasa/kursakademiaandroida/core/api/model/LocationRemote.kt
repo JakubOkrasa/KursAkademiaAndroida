@@ -1,4 +1,4 @@
-package pl.jakubokrasa.kursakademiaandroida.features.data.remote.model
+package pl.jakubokrasa.kursakademiaandroida.core.api.model
 
 
 import com.google.gson.annotations.SerializedName
