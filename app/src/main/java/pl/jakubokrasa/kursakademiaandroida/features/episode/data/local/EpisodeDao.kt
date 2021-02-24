@@ -1,4 +1,4 @@
-package pl.jakubokrasa.kursakademiaandroida.features.episode.data
+package pl.jakubokrasa.kursakademiaandroida.features.episode.data.local
 
 import androidx.room.Dao
 import androidx.room.Insert

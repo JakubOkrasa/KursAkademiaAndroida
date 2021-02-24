@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test
 import pl.jakubokrasa.kursakademiaandroida.core.data.api.RickAndMortyApi
 import pl.jakubokrasa.kursakademiaandroida.core.data.api.model.episode.EpisodesResponse
 import pl.jakubokrasa.kursakademiaandroida.core.network.NetworkStateProvider
-import pl.jakubokrasa.kursakademiaandroida.features.episode.data.EpisodeDao
+import pl.jakubokrasa.kursakademiaandroida.features.episode.data.local.EpisodeDao
 import pl.jakubokrasa.kursakademiaandroida.features.episode.data.local.model.EpisodeCached
 import pl.jakubokrasa.kursakademiaandroida.features.episode.domain.EpisodeRepository
 import pl.jakubokrasa.kursakademiaandroida.mock
