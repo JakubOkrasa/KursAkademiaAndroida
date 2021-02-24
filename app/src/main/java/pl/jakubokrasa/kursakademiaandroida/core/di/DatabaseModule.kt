@@ -3,7 +3,7 @@ package pl.jakubokrasa.kursakademiaandroida.core.di
 import androidx.room.Room
 import org.koin.android.ext.koin.androidContext
 import org.koin.dsl.module
-import pl.jakubokrasa.kursakademiaandroida.core.api.RickAndMortyDatabase
+import pl.jakubokrasa.kursakademiaandroida.core.data.api.RickAndMortyDatabase
 
 val databaseModule = module {
     single {

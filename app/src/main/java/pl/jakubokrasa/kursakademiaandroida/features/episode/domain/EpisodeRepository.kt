@@ -1,6 +1,5 @@
 package pl.jakubokrasa.kursakademiaandroida.features.episode.domain
 
-import pl.jakubokrasa.kursakademiaandroida.features.episode.data.local.EpisodeCached
 import pl.jakubokrasa.kursakademiaandroida.features.episode.domain.model.Episode
 
 interface EpisodeRepository {

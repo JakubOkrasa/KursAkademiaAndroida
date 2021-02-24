@@ -1,18 +1,16 @@
 package pl.jakubokrasa.kursakademiaandroida.features.episode.data.repository
 
-import io.mockk.MockKSettings.relaxed
 import io.mockk.coEvery
 import io.mockk.coVerify
 import io.mockk.every
 import io.mockk.mockk
 import kotlinx.coroutines.runBlocking
-import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
-import pl.jakubokrasa.kursakademiaandroida.core.api.RickAndMortyApi
-import pl.jakubokrasa.kursakademiaandroida.core.api.model.EpisodesResponse
+import pl.jakubokrasa.kursakademiaandroida.core.data.api.RickAndMortyApi
+import pl.jakubokrasa.kursakademiaandroida.core.data.api.model.episode.EpisodesResponse
 import pl.jakubokrasa.kursakademiaandroida.core.network.NetworkStateProvider
 import pl.jakubokrasa.kursakademiaandroida.features.episode.data.EpisodeDao
-import pl.jakubokrasa.kursakademiaandroida.features.episode.data.local.EpisodeCached
+import pl.jakubokrasa.kursakademiaandroida.features.episode.data.local.model.EpisodeCached
 import pl.jakubokrasa.kursakademiaandroida.features.episode.domain.EpisodeRepository
 import pl.jakubokrasa.kursakademiaandroida.mock
 

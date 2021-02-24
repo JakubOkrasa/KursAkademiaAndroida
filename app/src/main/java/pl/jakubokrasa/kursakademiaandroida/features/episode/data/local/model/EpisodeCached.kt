@@ -1,4 +1,4 @@
-package pl.jakubokrasa.kursakademiaandroida.features.episode.data.local
+package pl.jakubokrasa.kursakademiaandroida.features.episode.data.local.model
 
 import androidx.room.Entity
 import com.google.gson.annotations.SerializedName

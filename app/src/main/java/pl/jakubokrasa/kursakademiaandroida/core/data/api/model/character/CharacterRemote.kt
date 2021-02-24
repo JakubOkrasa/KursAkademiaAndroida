@@ -1,7 +1,9 @@
-package pl.jakubokrasa.kursakademiaandroida.core.api.model
+package pl.jakubokrasa.kursakademiaandroida.core.data.api.model.character
 
 
 import com.google.gson.annotations.SerializedName
+import pl.jakubokrasa.kursakademiaandroida.core.data.api.model.location.LocationRemote
+import pl.jakubokrasa.kursakademiaandroida.core.data.api.model.origin.OriginResponse
 import pl.jakubokrasa.kursakademiaandroida.features.character.domain.model.Character
 
 data class CharacterRemote(

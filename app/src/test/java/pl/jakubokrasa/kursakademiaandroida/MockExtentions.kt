@@ -1,10 +1,10 @@
 package pl.jakubokrasa.kursakademiaandroida
 
 import org.jetbrains.annotations.TestOnly
-import pl.jakubokrasa.kursakademiaandroida.core.api.model.EpisodeRemote
-import pl.jakubokrasa.kursakademiaandroida.core.api.model.EpisodesResponse
-import pl.jakubokrasa.kursakademiaandroida.core.api.model.ResponseInfo
-import pl.jakubokrasa.kursakademiaandroida.features.episode.data.local.EpisodeCached
+import pl.jakubokrasa.kursakademiaandroida.core.data.api.model.episode.EpisodeRemote
+import pl.jakubokrasa.kursakademiaandroida.core.data.api.model.episode.EpisodesResponse
+import pl.jakubokrasa.kursakademiaandroida.core.data.api.model.ResponseInfo
+import pl.jakubokrasa.kursakademiaandroida.features.episode.data.local.model.EpisodeCached
 
 @TestOnly
 fun EpisodeRemote.Companion.mock() = EpisodeRemote(
@@ -27,7 +27,7 @@ fun ResponseInfo.Companion.mock() = ResponseInfo(
 
 @TestOnly
 fun EpisodesResponse.Companion.mock() = EpisodesResponse(
-    info=ResponseInfo.mock(),
+    info= ResponseInfo.mock(),
     results = listOf(
         EpisodeRemote.mock(),
         EpisodeRemote.mock(),

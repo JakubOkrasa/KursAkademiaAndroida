@@ -1,4 +1,4 @@
-package pl.jakubokrasa.kursakademiaandroida.core.database
+package pl.jakubokrasa.kursakademiaandroida.core.data.local.database
 
 import androidx.room.TypeConverter
 import com.google.gson.Gson

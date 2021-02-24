@@ -1,15 +1,15 @@
 package pl.jakubokrasa.kursakademiaandroida.features.episode.data.repository
 
-import pl.jakubokrasa.kursakademiaandroida.core.api.RickAndMortyApi
+import pl.jakubokrasa.kursakademiaandroida.core.data.api.RickAndMortyApi
 import pl.jakubokrasa.kursakademiaandroida.core.network.NetworkStateProvider
 import pl.jakubokrasa.kursakademiaandroida.features.episode.data.EpisodeDao
-import pl.jakubokrasa.kursakademiaandroida.features.episode.data.local.EpisodeCached
+import pl.jakubokrasa.kursakademiaandroida.features.episode.data.local.model.EpisodeCached
 import pl.jakubokrasa.kursakademiaandroida.features.episode.domain.EpisodeRepository
 import pl.jakubokrasa.kursakademiaandroida.features.episode.domain.model.Episode
 
 class EpisodeRepositoryImpl(
     private val api: RickAndMortyApi,
-    private val dao: EpisodeDao,
+    private val episodeDao: EpisodeDao,
     private val networkStateProvider: NetworkStateProvider
 ): EpisodeRepository {
     override suspend fun getEpisodes(): List<Episode> {
@@ -25,13 +25,13 @@ class EpisodeRepositoryImpl(
     }
 
     private suspend fun getEpisodesFromLocal(): List<Episode> {
-       return dao.getEpisodes().map { it.toEpisode() }
+       return episodeDao.getEpisodes().map { it.toEpisode() }
     }
 
     override suspend fun saveEpisodesToLocal(episodes: List<Episode>) {
         episodes.map { EpisodeCached(it) }
             .toTypedArray()
-            .let { dao.saveEpisodes(*it) }
+            .let { episodeDao.saveEpisodes(*it) }
     }
 
 }
