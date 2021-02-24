@@ -22,6 +22,20 @@ data class CharacterCached(
     val type: String,
     val url: String
 ) {
+    constructor(character: Character) : this(
+        id=character.id,
+        episode=character.episode,
+        gender=character.gender,
+        image=character.image,
+        location=LocationCached(character.location),
+        name=character.name,
+        origin=OriginCached(character.origin),
+        species=character.species,
+        status=character.status,
+        type=character.type,
+        url=character.url
+
+    )
 
     fun toCharacter() = Character(
         id=id,
@@ -37,18 +51,5 @@ data class CharacterCached(
         url=url
     )
     
-    constructor(character: Character) : this(
-        id=character.id,
-        episode=character.episode,
-        gender=character.gender,
-        image=character.image,
-        location=LocationCached(character.location),
-        name=character.name,
-        origin=OriginCached(character.origin),
-        species=character.species,
-        status=character.status,
-        type=character.type,
-        url=character.url   
-        
-    )
+    companion object
 }

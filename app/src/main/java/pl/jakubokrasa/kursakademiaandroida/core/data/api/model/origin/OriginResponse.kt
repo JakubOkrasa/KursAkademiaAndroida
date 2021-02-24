@@ -11,4 +11,6 @@ data class OriginResponse(
 
 {
     fun toOrigin() = Origin(name, url)
+
+    companion object
 }

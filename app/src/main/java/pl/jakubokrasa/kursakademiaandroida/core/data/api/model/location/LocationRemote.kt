@@ -21,4 +21,6 @@ data class LocationRemote(
         residents = residents,
         type = type,
         url = url)
+
+    companion object
 }

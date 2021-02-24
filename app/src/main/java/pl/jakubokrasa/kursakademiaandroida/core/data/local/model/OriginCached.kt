@@ -17,4 +17,6 @@ data class OriginCached(
     fun toOrigin() = Origin(
         name = name,
         url = url)
+
+    companion object
 }

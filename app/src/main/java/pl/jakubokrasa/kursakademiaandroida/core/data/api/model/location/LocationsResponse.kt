@@ -7,5 +7,5 @@ data class LocationsResponse(
     @SerializedName("info")val info: ResponseInfo,
     @SerializedName("results")val results: List<LocationRemote>
 ){
-
+ companion object
 }

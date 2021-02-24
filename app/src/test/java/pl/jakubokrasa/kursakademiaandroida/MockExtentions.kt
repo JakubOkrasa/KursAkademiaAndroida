@@ -4,7 +4,15 @@ import org.jetbrains.annotations.TestOnly
 import pl.jakubokrasa.kursakademiaandroida.core.data.api.model.episode.EpisodeRemote
 import pl.jakubokrasa.kursakademiaandroida.core.data.api.model.episode.EpisodesResponse
 import pl.jakubokrasa.kursakademiaandroida.core.data.api.model.ResponseInfo
+import pl.jakubokrasa.kursakademiaandroida.core.data.api.model.character.CharacterRemote
+import pl.jakubokrasa.kursakademiaandroida.core.data.api.model.character.CharactersResponse
+import pl.jakubokrasa.kursakademiaandroida.core.data.api.model.location.LocationRemote
+import pl.jakubokrasa.kursakademiaandroida.core.data.api.model.location.LocationsResponse
+import pl.jakubokrasa.kursakademiaandroida.core.data.api.model.origin.OriginResponse
+import pl.jakubokrasa.kursakademiaandroida.core.data.local.model.OriginCached
+import pl.jakubokrasa.kursakademiaandroida.features.character.data.CharacterCached
 import pl.jakubokrasa.kursakademiaandroida.features.episode.data.local.model.EpisodeCached
+import pl.jakubokrasa.kursakademiaandroida.features.location.data.local.model.LocationCached
 
 @TestOnly
 fun EpisodeRemote.Companion.mock() = EpisodeRemote(
@@ -35,6 +43,7 @@ fun EpisodesResponse.Companion.mock() = EpisodesResponse(
     )
 )
 
+@TestOnly
 fun EpisodeCached.Companion.mock() = EpisodeCached(
     id = 1,
     name = "episode name",
@@ -42,4 +51,88 @@ fun EpisodeCached.Companion.mock() = EpisodeCached(
     code = "episode code",
     characters = emptyList(),
     url = "episode url"
+)
+
+@TestOnly
+fun CharacterRemote.Companion.mock() = CharacterRemote(
+    created = "some created date",
+    episode= listOf("E10", "E12", "E44"),
+    gender= "male",
+    id=33,
+    image= "image url",
+    location= LocationRemote.Companion.mock(),
+    name="name",
+    origin= OriginResponse.Companion.mock(),
+    species="species name",
+    status="ready status",
+    type="type",
+    url="url"
+)
+
+@TestOnly
+fun CharactersResponse.Companion.mock() = CharactersResponse(
+    info= ResponseInfo.mock(),
+    results = listOf(
+        CharacterRemote.mock(),
+        CharacterRemote.mock(),
+        CharacterRemote.mock()
+    )
+)
+
+@TestOnly
+fun CharacterCached.Companion.mock() = CharacterCached(
+    episode= listOf("E10", "E12", "E44"),
+    gender= "male",
+    id=33,
+    image= "image url",
+    location= LocationCached.Companion.mock(),
+    name="name",
+    origin= OriginCached.Companion.mock(),
+    species="species name",
+    status="ready status",
+    type="type",
+    url="url"
+)
+
+@TestOnly
+fun LocationRemote.Companion.mock() = LocationRemote(
+    created = "some created date",
+    id = 77,
+    dimension = "dimension",
+    name = "name",
+    residents = listOf("res1", "res2"),
+    type = "type",
+    url = "url"
+)
+
+@TestOnly
+fun LocationsResponse.Companion.mock() = LocationsResponse(
+    info= ResponseInfo.mock(),
+    results = listOf(
+        LocationRemote.mock(),
+        LocationRemote.mock(),
+        LocationRemote.mock()
+    )
+)
+
+@TestOnly
+fun LocationCached.Companion.mock() = LocationCached(
+    id = 77,
+    dimension = "dimension",
+    name = "name",
+    residents = listOf("res1", "res2"),
+    type = "type",
+    url = "url"
+)
+
+@TestOnly
+fun OriginResponse.Companion.mock() = OriginResponse(
+    name= "origin name",
+    url = "origin url"
+)
+
+@TestOnly
+fun OriginCached.Companion.mock() = OriginCached(
+    name= "origin name",
+    url = "origin url"
 )

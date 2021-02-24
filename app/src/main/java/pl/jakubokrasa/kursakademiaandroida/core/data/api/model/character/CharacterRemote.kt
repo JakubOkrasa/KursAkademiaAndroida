@@ -34,4 +34,5 @@ data class CharacterRemote(
   type=type,
   url=url
  )
+    companion object
 }

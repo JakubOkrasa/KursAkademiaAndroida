@@ -8,8 +8,9 @@ import pl.jakubokrasa.kursakademiaandroida.features.episode.data.repository.Epis
 
 class CharacterRepositoryImpl(
     private val api: RickAndMortyApi,
-    private val networkStateProvider: NetworkStateProvider,
-    private val characterDao: CharacterDao): CharacterRepository {
+    private val characterDao: CharacterDao,
+    private val networkStateProvider: NetworkStateProvider
+    ): CharacterRepository {
     override suspend fun getCharacters(): List<Character> {
         return if(networkStateProvider.isNetworkAvailable()) {
             getCharactersFromRemote()

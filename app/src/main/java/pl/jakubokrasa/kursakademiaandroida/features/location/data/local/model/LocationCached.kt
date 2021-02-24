@@ -30,4 +30,6 @@ data class LocationCached(
         residents = residents,
         type = type,
         url = url)
+
+    companion object
 }
