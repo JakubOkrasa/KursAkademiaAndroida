@@ -34,5 +34,4 @@ class CharacterRepositoryImpl(
             .toTypedArray()
             .let { characterDao.saveCharacters(*it) }
     }
-} 
-
+}
