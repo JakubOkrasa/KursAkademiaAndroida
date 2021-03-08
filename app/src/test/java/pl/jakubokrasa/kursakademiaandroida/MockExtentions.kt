@@ -4,6 +4,8 @@ import org.jetbrains.annotations.TestOnly
 import pl.jakubokrasa.kursakademiaandroida.core.data.api.model.episode.EpisodeRemote
 import pl.jakubokrasa.kursakademiaandroida.core.data.api.model.episode.EpisodesResponse
 import pl.jakubokrasa.kursakademiaandroida.core.data.api.model.ResponseInfo
+import pl.jakubokrasa.kursakademiaandroida.core.data.api.model.character.CharacterLocationRemote
+import pl.jakubokrasa.kursakademiaandroida.core.data.api.model.character.CharacterOriginResponse
 import pl.jakubokrasa.kursakademiaandroida.core.data.api.model.character.CharacterRemote
 import pl.jakubokrasa.kursakademiaandroida.core.data.api.model.character.CharactersResponse
 import pl.jakubokrasa.kursakademiaandroida.core.data.api.model.location.LocationRemote
@@ -11,7 +13,10 @@ import pl.jakubokrasa.kursakademiaandroida.core.data.api.model.location.Location
 import pl.jakubokrasa.kursakademiaandroida.core.data.api.model.origin.OriginResponse
 import pl.jakubokrasa.kursakademiaandroida.core.data.local.model.OriginCached
 import pl.jakubokrasa.kursakademiaandroida.features.character.data.CharacterCached
+import pl.jakubokrasa.kursakademiaandroida.features.character.data.CharacterLocationCached
+import pl.jakubokrasa.kursakademiaandroida.features.character.data.CharacterOriginCached
 import pl.jakubokrasa.kursakademiaandroida.features.episode.data.local.model.EpisodeCached
+import pl.jakubokrasa.kursakademiaandroida.features.location.data.local.model.CharacterLocation
 import pl.jakubokrasa.kursakademiaandroida.features.location.data.local.model.LocationCached
 
 @TestOnly
@@ -60,9 +65,19 @@ fun CharacterRemote.Companion.mock() = CharacterRemote(
     gender= "male",
     id=33,
     image= "image url",
-    location= LocationRemote.Companion.mock(),
+    location = CharacterLocationRemote(
+        10,
+        "example dimension",
+        "example name",
+        listOf("example resident"),
+        "example type",
+        "example url"
+    ),
     name="name",
-    origin= OriginResponse.Companion.mock(),
+    origin= CharacterOriginResponse(
+        "example name",
+        "example url"
+    ),
     species="species name",
     status="ready status",
     type="type",
@@ -85,9 +100,19 @@ fun CharacterCached.Companion.mock() = CharacterCached(
     gender= "male",
     id=33,
     image= "image url",
-    location= LocationCached.Companion.mock(),
+    location = CharacterLocationCached(
+        10,
+        "example dimension",
+        "example name",
+        listOf("example resident"),
+        "example type",
+        "example url"
+    ),
     name="name",
-    origin= OriginCached.Companion.mock(),
+    origin= CharacterOriginCached(
+        "example name",
+        "example url"
+    ),
     species="species name",
     status="ready status",
     type="type",

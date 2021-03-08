@@ -10,7 +10,7 @@ import pl.jakubokrasa.kursakademiaandroida.features.episode.data.local.EpisodeDa
 import pl.jakubokrasa.kursakademiaandroida.features.episode.data.local.model.EpisodeCached
 import pl.jakubokrasa.kursakademiaandroida.features.location.data.local.model.LocationCached
 
-@Database(entities = [EpisodeCached::class, CharacterCached::class, LocationCached::class, OriginCached::class], version = 1)
+@Database(entities = [EpisodeCached::class, CharacterCached::class, LocationCached::class], version = 1)
 @TypeConverters(ListConverter::class)
 abstract class RickAndMortyDatabase : RoomDatabase() {
     abstract fun episodeDao(): EpisodeDao

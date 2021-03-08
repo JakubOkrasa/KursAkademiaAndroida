@@ -8,10 +8,10 @@ import pl.jakubokrasa.kursakademiaandroida.features.location.domain.model.Locati
 data class LocationCached(
     val id: Int,
     val dimension: String,
-	 val name: String,
-	 val residents: List<String>,
-	 val type: String,
-	 val url: String
+    val name: String,
+    val residents: List<String>,
+    val type: String,
+    val url: String
 )
 {
     constructor(location: Location): this(
@@ -33,3 +33,17 @@ data class LocationCached(
 
     companion object
 }
+
+class CharacterOrigin(
+    val name: String,
+    val url: String
+)
+
+class CharacterLocation(
+    val id: Int,
+    val dimension: String,
+    val name: String,
+    val residents: List<String>,
+    val type: String,
+    val url: String
+)
