@@ -1,4 +1,4 @@
-package pl.jakubokrasa.kursakademiaandroida.features.data.remote.model
+package pl.jakubokrasa.kursakademiaandroida.core.data.api.model.origin
 
 
 import com.google.gson.annotations.SerializedName
@@ -11,4 +11,6 @@ data class OriginResponse(
 
 {
     fun toOrigin() = Origin(name, url)
+
+    companion object
 }

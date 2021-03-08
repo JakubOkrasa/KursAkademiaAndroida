@@ -4,4 +4,6 @@ import pl.jakubokrasa.kursakademiaandroida.features.character.domain.model.Chara
 
 interface CharacterRepository {
     suspend fun getCharacters(): List<Character>
+
+    suspend fun saveCharactersToLocal(characters: List<Character>)
 }

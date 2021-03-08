@@ -1,4 +1,4 @@
-package pl.jakubokrasa.kursakademiaandroida.features.data.remote.model
+package pl.jakubokrasa.kursakademiaandroida.core.data.api.model.location
 
 
 import com.google.gson.annotations.SerializedName
@@ -14,5 +14,13 @@ data class LocationRemote(
     @SerializedName("url") val url: String
 )
 {
-    fun toLocation() = Location(id, name, dimension, residents, type, url)
+    fun toLocation() = Location(
+        id = id,
+        dimension = dimension,
+        name = name,
+        residents = residents,
+        type = type,
+        url = url)
+
+    companion object
 }

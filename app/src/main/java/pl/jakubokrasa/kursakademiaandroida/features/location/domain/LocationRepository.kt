@@ -4,4 +4,6 @@ import pl.jakubokrasa.kursakademiaandroida.features.location.domain.model.Locati
 
 interface LocationRepository {
     suspend fun getLocations(): List<Location>
+
+    suspend fun saveLocationsToLocal(locations: List<Location>)
 }
